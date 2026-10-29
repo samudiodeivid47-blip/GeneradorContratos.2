@@ -1,0 +1,384 @@
+:root {
+    --azul-oscuro: #1a2c42;
+    --azul: #2c4a6e;
+    --dorado: #a9822f;
+    --gris-claro: #f4f5f7;
+    --gris-borde: #d7dbe0;
+    --rojo-error: #b3261e;
+    --rojo-fondo: #fdecea;
+    --verde: #1e7e34;
+    --texto: #212529;
+    --radio: 8px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--gris-claro);
+    color: var(--texto);
+    line-height: 1.5;
+}
+
+.contenedor {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 24px 16px 60px;
+}
+
+.encabezado {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.encabezado h1 {
+    color: var(--azul-oscuro);
+    font-size: 1.6rem;
+    margin-bottom: 4px;
+}
+
+.subtitulo {
+    color: #666;
+    margin: 0;
+}
+
+/* ---------- Aviso legal ---------- */
+.aviso-legal {
+    background: #fff8e6;
+    border: 1px solid #e6c975;
+    border-radius: var(--radio);
+    padding: 14px 16px;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.aviso-legal a {
+    color: var(--azul);
+    font-weight: 600;
+}
+
+.mensaje-error-general {
+    background: var(--rojo-fondo);
+    border: 1px solid var(--rojo-error);
+    color: var(--rojo-error);
+    border-radius: var(--radio);
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    font-size: 0.9rem;
+}
+
+/* ---------- Indicador de pasos ---------- */
+.indicador-pasos {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 8px;
+}
+
+.paso {
+    flex: 1;
+    text-align: center;
+    padding: 10px 6px;
+    background: #e7eaf0;
+    border-radius: var(--radio);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #555;
+}
+
+.paso.activo {
+    background: var(--azul);
+    color: #fff;
+}
+
+/* ---------- Formulario ---------- */
+.seccion-paso {
+    background: #fff;
+    border: 1px solid var(--gris-borde);
+    border-radius: var(--radio);
+    padding: 20px;
+    margin-bottom: 16px;
+}
+
+.seccion-paso legend {
+    font-weight: 700;
+    color: var(--azul-oscuro);
+    padding: 0 6px;
+}
+
+.seccion-paso.oculto {
+    display: none;
+}
+
+.campo {
+    margin-bottom: 14px;
+}
+
+.campo-grupo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 9px 10px;
+    border: 1px solid var(--gris-borde);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-family: inherit;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--azul);
+    box-shadow: 0 0 0 2px rgba(44, 74, 110, 0.15);
+}
+
+.campo-invalido {
+    border-color: var(--rojo-error) !important;
+    background: var(--rojo-fondo);
+}
+
+.error-campo {
+    display: block;
+    color: var(--rojo-error);
+    font-size: 0.8rem;
+    margin-top: 4px;
+}
+
+small {
+    display: block;
+    color: #777;
+    font-size: 0.78rem;
+    margin-top: 3px;
+}
+
+.campo-checkbox label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+.campo-checkbox input {
+    width: auto;
+}
+
+/* ---------- Botones ---------- */
+.navegacion-pasos {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+button, .btn-primario, .btn-secundario {
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 18px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-siguiente, .btn-generar, .btn-primario {
+    background: var(--azul);
+    color: #fff;
+    margin-left: auto;
+}
+
+.btn-siguiente:hover, .btn-generar:hover, .btn-primario:hover {
+    background: var(--azul-oscuro);
+}
+
+.btn-anterior, .btn-secundario {
+    background: #e7eaf0;
+    color: var(--texto);
+}
+
+.btn-anterior:hover, .btn-secundario:hover {
+    background: #d7dbe0;
+}
+
+.enlace-listado {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.enlace-listado a {
+    color: var(--azul);
+}
+
+/* ---------- Barra de acciones (vista contrato / listado) ---------- */
+.barra-acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.nota-edicion {
+    background: #e8f0fe;
+    border: 1px solid #a9c4f0;
+    border-radius: var(--radio);
+    padding: 10px 14px;
+    font-size: 0.85rem;
+    margin-bottom: 14px;
+}
+
+/* ---------- Tabla de listado ---------- */
+.tabla-listado {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: var(--radio);
+    overflow: hidden;
+}
+
+.tabla-listado th, .tabla-listado td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--gris-borde);
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.tabla-listado th {
+    background: var(--azul-oscuro);
+    color: #fff;
+}
+
+/* ---------- Documento del contrato (estilo "legajo") ---------- */
+#documentoContrato, .documento-contrato {
+    background: #fff;
+    border: 1px solid var(--gris-borde);
+    border-radius: var(--radio);
+    padding: 40px;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    line-height: 1.7;
+}
+
+.documento-contrato h1 {
+    text-align: center;
+    font-size: 1.3rem;
+    color: var(--azul-oscuro);
+    border-bottom: 2px solid var(--dorado);
+    padding-bottom: 14px;
+    margin-bottom: 6px;
+}
+
+.doc-fecha {
+    text-align: center;
+    color: #777;
+    font-size: 0.85rem;
+    margin-bottom: 24px;
+}
+
+.documento-contrato h2 {
+    font-size: 1rem;
+    color: var(--azul-oscuro);
+    margin-top: 24px;
+    margin-bottom: 8px;
+    border-left: 4px solid var(--dorado);
+    padding-left: 10px;
+}
+
+.documento-contrato blockquote {
+    background: var(--gris-claro);
+    border-left: 3px solid var(--gris-borde);
+    margin: 8px 0;
+    padding: 10px 14px;
+    font-style: italic;
+}
+
+.documento-contrato ul {
+    padding-left: 22px;
+}
+
+.doc-firmas {
+    margin-top: 40px;
+}
+
+.firmas-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.firma-linea {
+    border-bottom: 1px solid #333;
+    height: 40px;
+}
+
+.doc-aviso {
+    margin-top: 30px;
+    border-top: 1px dashed var(--gris-borde);
+    padding-top: 12px;
+    font-size: 0.75rem;
+    color: #777;
+}
+
+#documentoContrato.editable {
+    border-color: var(--azul);
+    box-shadow: 0 0 0 3px rgba(44, 74, 110, 0.15);
+}
+
+/* ---------- Normativa ---------- */
+.lista-normativa {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-normativa li {
+    background: #fff;
+    border: 1px solid var(--gris-borde);
+    border-radius: var(--radio);
+    padding: 12px 16px;
+    margin-bottom: 10px;
+}
+
+.lista-normativa a {
+    color: var(--azul);
+    font-size: 0.85rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+    .campo-grupo, .firmas-grid {
+        grid-template-columns: 1fr;
+    }
+    .indicador-pasos {
+        font-size: 0.75rem;
+    }
+    .documento-contrato {
+        padding: 20px;
+    }
+}
+
+/* ---------- Impresión ---------- */
+@media print {
+    body {
+        background: #fff;
+    }
+    .no-imprimir, .barra-acciones, .nota-edicion {
+        display: none !important;
+    }
+    .contenedor {
+        max-width: 100%;
+        padding: 0;
+    }
+    #documentoContrato, .documento-contrato {
+        border: none;
+        padding: 0;
+    }
+}

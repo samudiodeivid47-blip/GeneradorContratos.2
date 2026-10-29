@@ -1,0 +1,13 @@
+<?php
+require_once __DIR__ . "/../config/conexionBDD.php";
+require_once __DIR__ . "/../logica/sesion.php";
+requerirLogin("login.php");
+?>
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tratamiento de datos personales</title><link rel="stylesheet" href="../css/estilos.css"></head><body><main class="contenedor"><p><a class="btn-secundario" href="../index.php">← Volver</a></p><h1>Política y aviso de tratamiento de datos personales</h1>
+<div class="aviso-legal"><strong>Responsable:</strong> la empresa empleadora que diligencia y conserva la información. El administrador del sistema debe completar aquí su razón social, NIT, domicilio y canal de consultas/reclamos antes de poner la aplicación en producción.</div>
+<h2>Finalidades</h2><p>La información se usa para preparar, gestionar, revisar, conservar y consultar contratos laborales; cumplir obligaciones laborales, de seguridad social, contables y legales; administrar usuarios, prevenir accesos indebidos y mantener trazabilidad de operaciones.</p>
+<h2>Datos tratados</h2><p>Identificación y contacto de empleador y trabajador, información laboral y contractual, datos de pago y afiliación a seguridad social cuando sean necesarios. No deben solicitarse datos sensibles innecesarios.</p>
+<h2>Derechos del titular</h2><p>El titular puede conocer, actualizar y rectificar sus datos, solicitar prueba de la autorización, conocer el uso dado a la información y presentar consultas o reclamos al responsable, conforme a la Ley 1581 de 2012 y el Decreto 1074 de 2015. Los derechos de supresión o revocatoria pueden estar limitados cuando exista un deber legal o contractual de conservación.</p>
+<h2>Medidas de seguridad y conservación</h2><ul><li>Acceso por perfiles y mínimo privilegio.</li><li>Contraseñas almacenadas mediante hash seguro, conexión HTTPS en producción y copias de seguridad protegidas.</li><li>Registro de accesos y cambios relevantes, sin guardar contraseñas ni datos completos innecesarios en logs.</li><li>Retención por el periodo legal aplicable; luego, eliminación segura o anonimización cuando proceda.</li><li>No publicar ni enviar documentos a terceros sin autorización o fundamento jurídico.</li></ul>
+<h2>Autorización</h2><p>Antes de recopilar y tratar datos personales, la organización debe presentar este aviso, registrar la autorización cuando sea legalmente necesaria y conservar evidencia consultable. Esta pantalla es una plantilla operativa y debe personalizarse con los datos reales del responsable y sus canales de atención antes del despliegue.</p>
+<p><strong>Marco principal:</strong> Ley 1581 de 2012, Decreto 1074 de 2015 y normas laborales colombianas aplicables.</p></main></body></html>
